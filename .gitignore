@@ -1,0 +1,17 @@
+# Jekyll
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+Gemfile.lock
+
+# Editor e sistema operativo (opzionale)
+.DS_Store
+Thumbs.db
+
+# Bundler
+.bundle/
+vendor/bundle/
+
+# Gem
+Gemfile

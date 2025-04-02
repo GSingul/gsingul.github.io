@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.background-home {
+    min-height: 820px;
+    width: 100%;
+    background: url('/images/Background_home.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.animated-btn {
+    transition: transform 0.3s ease-in-out;
+}
+
+.animated-btn:hover {
+    transform: scale(1.1);
+}
+
+.background-hero2 {
+    min-height: 820px;
+    width: 100%;
+    background: url('/images/black-space-background.webp') no-repeat center center;
+    background-size: cover;
+}
+
