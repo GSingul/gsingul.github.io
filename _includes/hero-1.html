@@ -1,26 +1,129 @@
 <div class="container-fluid my-4 p-0">
-        <div class="background-home d-flex justify-content-center align-items-center" style="min-height: 820px; width: 100%;">
-        <div class="container" style="max-width: 1450px; height: 800px;">
-            <div class="row h-100 p-4">
-                <div class="col-6 d-flex align-items-center justify-content-center">
-                        <div class="row d-flex flex-wrap" style="width: 100%; min-height: 0;">
-                            <h2 class="text-white display-2">Educazione</h2>
-                            <h1 class="display-1" style="color: #0075FF;">Online</h1>
-                            <p>Benvenuti nella nuova frontiera dell'apprendimento online!</p>
-                            <p>Gsingul ti offre lezioni interattive e coinvolgenti integrate con la realtà virtuale, per un'esperienza formativa davvero immersiva. Esplora corsi personalizzati, partecipa attivamente alle classi virtuali e interagisci in tempo reale con docenti e compagni.</p>
-                            <h3>Accedi per iscriverti</h3>
-                            <a href="{{ '/login' | relative_url }}">Accedi o Registrati</a>
+    <div class="background-home d-flex justify-content-center align-items-center" style="min-height: 820px; width: 100%;">
+    <div class="container" style="max-width: 1450px; height: 800px;">
+        <div class="row h-100 p-4">
+            <div class="col-6 d-flex align-items-center justify-content-center">
+                    <div class="row d-flex flex-wrap" style="width: 100%; min-height: 0;">
+                        <h2 class="text-white display-2">Educazione</h2>
+                        <h1 class="display-1" style="color: #0075FF;">Online</h1>
+                        <p>Benvenuti nella nuova frontiera dell'apprendimento online!</p>
+                        <p>Gsingul ti offre lezioni interattive e coinvolgenti integrate con la realtà virtuale, per un'esperienza formativa davvero immersiva. Esplora corsi personalizzati, partecipa attivamente alle classi virtuali e interagisci in tempo reale con docenti e compagni.</p>
+                        <h3>Accedi per iscriverti</h3>
+                        <a href="{{ '/login' | relative_url }}">Accedi o Registrati</a>
 
-                         </div>
-                </div>
-                <div class="col-6 d-flex align-items-center justify-content-center">
-                    <div class="d-flex w-100 h-100">
-                        <img src="/images/Laureato_destokp.png" alt="Laureato" class="img-fluid" 
-                             style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
+                     </div>
+            </div>
+            <div class="col-6 d-flex align-items-center justify-content-center">
+                <div class="d-flex w-100 h-100">
+                    <img src="{{ '../images/Laureato_destokp.png' | relative_url }}" alt="Laureato" class="img-fluid" 
+                         style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
             </div>
         </div>
-        </div>
+    </div>
+    </div>
 
+<!-- Shapes Section -->
+<div id="full-yellow" class="shape full-yellow font-selection"></div> <!-- 3 -->
+<div id="center-trapezoid" class="shape center-trapezoid">Search & Match</div> <!-- 5 -->
+<div id="right-triangle" class="shape right-triangle"></div> <!-- 6 -->
+<div id="full-green" class="shape full-green"></div> <!-- 2 -->
+<div id="full-blue" class="shape full-blue"></div> <!-- 1 -->
+<div id="blue-small-top" class="shape blue-small-top">Search & Match</div> <!-- 8 -->
+<div id="green-small" class="shape green-small"></div> <!-- 12 -->
+<!-- Shapes -->
+<div id="yellow-trapezoid" class="shape yellow-trapezoid font-selection">
+<div class="inner-text"> Cerca & Scatta! </div>
+<div class="small-text">
+  Dicci cosa stai cercando — materia, obiettivi, disponibilità. <br>
+  Il nostro algoritmo intelligente ti connette con l'insegnante ideale.
 </div>
+<a class="btn btn-5">Prova ?</a>
+</div> <!-- ✅ closes properly -->
+
+<div id="yellow-small" class="shape yellow-small"></div>
+<img src="../images/robot.png" id="corner-character" alt="Study Character"/>
+
+<!-- Section 2 -->
+<!-- <div class="section background-hero1 d-flex justify-content-center align-items-center text-white" style="width: 100%;">
+<div class="container" style="max-width: 1450px; height: 800px;">
+  <div class="row h-100 p-4">
+    <div class="col-6 d-flex align-items-center justify-content-center">
+      <div class="row d-flex flex-wrap" style="width: 100%; min-height: 0;">
+        <h2 class="display-2">Second Page</h2>
+        <p>Another section content here</p>
+      </div>
+    </div>
+    <div class="col-6 d-flex align-items-center justify-content-center">
+      <div class="d-flex w-100 h-100"> -->
+        <!-- Optional image -->
+      <!-- </div>
+    </div>
+  </div>
+</div>
+</div> -->
+</div>
+
+<script>
+const triangle1 = document.getElementById('full-blue');
+const triangle2 = document.getElementById('full-green');
+const triangle3 = document.getElementById('full-yellow');
+const triangle5 = document.getElementById('center-trapezoid');
+const triangle6 = document.getElementById('right-triangle');
+const triangle8 = document.getElementById('blue-small-top');
+const triangle10 = document.getElementById('yellow-trapezoid');
+const triangle12 = document.getElementById('green-small');
+const triangle13 = document.getElementById('yellow-small');
+const allShapes = [triangle1, triangle2, triangle3, triangle5, triangle6, triangle8, triangle10, triangle12, triangle13];
+
+function resetZIndexes() {
+triangle1.style.zIndex = "2";   // full-blue
+triangle2.style.zIndex = "1";   // full-green
+triangle3.style.zIndex = "40";  // full-yellow
+triangle5.style.zIndex = "41";  // center-trapezoid
+triangle6.style.zIndex = "42";  // right-triangle
+triangle8.style.zIndex = "8";   // blue-small-top
+triangle10.style.zIndex = "10"; // yellow-trapezoid
+triangle12.style.zIndex = "12"; // green-small
+triangle13.style.zIndex = "7";  // yellow-small
+}
+
+function bringToFront(...elements) {
+let z = 50;
+elements.forEach(el => {
+  el.style.zIndex = z++;
+});
+}
+
+function handle_1_5_Click() {
+resetZIndexes();
+bringToFront(triangle1, triangle13, triangle12);
+document.getElementById('corner-character').style.display = 'none';
+}
+
+function handle_2_12_Click() {
+resetZIndexes();
+bringToFront(triangle2, triangle8, triangle13);
+document.getElementById('corner-character').style.display = 'none';
+}
+
+function handle_3_13_Click() {
+resetZIndexes();
+bringToFront(triangle1, triangle10, triangle12);
+document.getElementById('corner-character').style.display = 'block';
+}
+
+function handle_8_Click() {
+resetZIndexes();
+bringToFront(triangle1, triangle13, triangle12);
+}
+
+triangle1.addEventListener('click', handle_1_5_Click);
+triangle5.addEventListener('click', handle_1_5_Click);
+triangle2.addEventListener('click', handle_2_12_Click);
+triangle12.addEventListener('click', handle_2_12_Click);
+triangle3.addEventListener('click', handle_3_13_Click);
+triangle13.addEventListener('click', handle_3_13_Click);
+triangle8.addEventListener('click', handle_8_Click);
+triangle6.addEventListener('click', handle_2_12_Click); // Optional
+</script>
