@@ -157,8 +157,11 @@ body {
   .yellow-trapezoid {
     /* background-image: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%); */
 
-    /* background-image: linear-gradient(to right, #8e54e9 0%, #4776e6 51%, #8e54e9 100%); */
-    background-image: linear-gradient(to right, #22f4fe 0%,  #6a23fe 51%, #22f4fe 100%);
+    /* background-image: linear-gradient(to right, #8e54e9 0%, #4776e6 51%, #8e54e9 100%);  */
+    background-image: linear-gradient(to right, #22f4fe 0%,  #6a23fe 51%, #22f4fe 100%) ;/* but this is the one */
+    /* background-image: linear-gradient(to right, #22f4fe  0%, #00b7eb 51%, #22f4fe 100%); */
+    /* background-image: linear-gradient(to right, #22f4fe  0%, #eeb5eb 51%, #22f4fe 100%); */ /* nice pink color */
+
     background-size: 200% auto;
     background-position: left center;
     transition: background-position 0.3s ease-out;
@@ -225,7 +228,8 @@ body {
   }
   .yellow-small{
     /* background-image: linear-gradient(to right, #8e54e9 0%, #4776e6 51%, #8e54e9 100%); */
-    background-image: linear-gradient(to right, #22f4fe 0%,  #6a23fe 51%, #22f4fe 100%);
+    /* background-image: linear-gradient(to right, #22f4fe 0%,  #6a23fe 51%, #22f4fe 100%); */
+    background-image: linear-gradient(to right, #22f4fe  0%, #00b7eb 51%, #22f4fe 100%);
     background-size: 200% auto;
     background-position: left center;
     transition: background-position 0.3s ease-out;
